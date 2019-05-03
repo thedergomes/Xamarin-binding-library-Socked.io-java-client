@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    
+    <remove-node path="/api/package[@name='okhttp3']/interface[@name='WebSocket']/method[@name='close']" />
+    
+    <remove-node path="/api/package[@name='okio']/interface[@name='BufferedSink']/method[@name='buffer']" />
+    
+    <remove-node path="/api/package[@name='okio']/interface[@name='BufferedSource']/method[@name='buffer']" />
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='emitCompleteSegments']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeByte']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeDecimalLong']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writehexadecimalUnsignedLong']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeHexadecimalUnsignedLong']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeInt']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeIntLe']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeLong']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeLongLe']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeShort']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeShortLe']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeString']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeUtf8']"
+    name="managedReturn">IBufferedSink</attr>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='writeUtf8CodePoint']"
+    name="managedReturn">IBufferedSink</attr>
+
+     <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='write' and count(parameter)=3 
+        and parameter[1][@type='byte[]'] 
+        and parameter[2][@type='int'] 
+        and parameter[3][@type='int']]" 
+    name="managedName">IBufferedSink</attr>
+
+   <remove-node path="/api/package[@name='okio']/interface[@name='BufferedSink']/
+    method[@name='write' and count(parameter)=3 
+        and parameter[1][@type='byte[]'] 
+        and parameter[2][@type='int'] 
+        and parameter[3][@type='int']]"/>
+
+    <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='write' and count(parameter)=1 
+        and parameter[1][@type='byte[]']]"
+    name="managedName">IBufferedSink</attr>
+
+   <remove-node path="/api/package[@name='okio']/interface[@name='BufferedSink']/
+    method[@name='write' and count(parameter)=1 
+        and parameter[1][@type='byte[]']]"/>
+
+        <attr path="/api/package[@name='okio']/
+    class[@name='Buffer']/
+    method[@name='write' and count(parameter)=1 
+        and parameter[1][@type='okio.ByteString']]"
+    name="managedName">IBufferedSink</attr>
+
+   <remove-node path="/api/package[@name='okio']/interface[@name='BufferedSink']/
+    method[@name='write' and count(parameter)=1 
+        and parameter[1][@type='okio.ByteString']]"/>
+
+    <attr path="/api/package[@name='okio']/class[@name='ByteString']/method[@name='compareTo' 
+    and count(parameter)=1 
+    and parameter[1][@type='okio.ByteString']]/parameter[1]" 
+    name="managedType">Java.Lang.Object</attr>
+
+    <add-node path="/api/package[@name='okio']">
+      <class abstract="false" deprecated="not deprecated" final="false" name="Options" static="true" visibility="public" extends="java.lang.Object">
+      </class>
+    </add-node>
+    
+</metadata>
